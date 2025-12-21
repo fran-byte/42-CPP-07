@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frromero <frromero@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/21 20:52:56 by frromero          #+#    #+#             */
-/*   Updated: 2025/12/21 23:00:47 by frromero         ###   ########.fr       */
+/*   Created: 2025/12/21 22:47:55 by frromero          #+#    #+#             */
+/*   Updated: 2025/12/21 23:17:24 by frromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ITER_HPP
-#define ITER_HPP
-#include <cstddef>
-#include <iostream>
+#include "iter.hpp"
 
-template <typename T>
-void printed(T array)
+int main(void)
 {
-    std::cout << array << std::endl;
+    int array[] = {100, 200, 300, 400, 500, 600};
+    ::iter(array, 6, ::printed<int>);
+
+    const char *arrayStr[] = {
+        "one hundred",
+        "two hundred",
+        "three hundred",
+        "four hundred",
+        "five hundred",
+        "six hundred"};
+    ::iter(arrayStr, 6, ::printed<const char *>);
+
+    return 0;
 }
-
-template <typename T, typename printed>
-void iter(T *arrayAddr, size_t size, printed function)
-{
-    for (size_t i = 0; i < size; i++)
-        function(arrayAddr[i]);
-};
-
-#endif
