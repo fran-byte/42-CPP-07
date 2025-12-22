@@ -15,7 +15,7 @@
 int main(void)
 {
     int array[] = {100, 200, 300, 400, 500, 600};
-    ::iter(array, 6, ::printed<int>);
+    ::iter(array, 6, ::printed<int>); /*pass by No const*/
 
     const char *arrayStr[] = {
         "one hundred",
@@ -24,7 +24,7 @@ int main(void)
         "four hundred",
         "five hundred",
         "six hundred"};
-    ::iter(arrayStr, 6, ::printed<const char *>);
+    ::iter(arrayStr, 6, ::printed<const char *>); /*pass by const reference*/
 
     return 0;
 }
