@@ -18,7 +18,6 @@ class Array
 {
     private:
         T *_arrayAddr;
-        F _function;
         unsigned int _n;
     public:
         Array(void);
