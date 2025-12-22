@@ -22,7 +22,9 @@ class Array
     public:
         Array(void);
         Array(unsigned int n);
+        Array(Array const &copy);
         ~Array(void);
+        Array &operator=(Array const &other);
 
 };
 
