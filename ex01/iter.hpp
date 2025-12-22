@@ -16,13 +16,13 @@
 #include <iostream>
 
 template <typename T>
-void printed(T array)
+void printed(const T& value)
 {
     std::cout << array << std::endl;
 }
 
-template <typename T, typename printed>
-void iter(T *arrayAddr, size_t size, printed function)
+template <typename T, typename F>
+void iter(T *arrayAddr, size_t size, F function)
 {
     for (size_t i = 0; i < size; i++)
         function(arrayAddr[i]);
