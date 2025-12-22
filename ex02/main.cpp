@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Array.cpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frromero <frromero@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,20 +10,5 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ARRAY_HPP
-#define ARRAY_HPP
 
-template <typename T, typename F>
-class Array
-{
-    private:
-        T *_arrayAddr;
-        F _function;
-    public:
-        Array(void);
-        Array(unsigned int n);
-        ~Array(void);
-
-};
-
-#endif
+#include "Array.hpp"
