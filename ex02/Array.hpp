@@ -13,12 +13,13 @@
 #ifndef ARRAY_HPP
 #define ARRAY_HPP
 
-template <typename T, typename F>
+template <typename T>
 class Array
 {
     private:
         T *_arrayAddr;
         F _function;
+        unsigned int _n;
     public:
         Array(void);
         Array(unsigned int n);
