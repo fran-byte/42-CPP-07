@@ -18,7 +18,7 @@
 template <typename T>
 void printed(const T& value)
 {
-    std::cout << array << std::endl;
+    std::cout << value << std::endl;
 }
 
 template <typename T, typename F>
