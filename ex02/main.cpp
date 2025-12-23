@@ -6,16 +6,96 @@
 /*   By: frromero <frromero@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 17:02:06 by frromero          #+#    #+#             */
-/*   Updated: 2025/12/23 17:02:07 by frromero         ###   ########.fr       */
+/*   Updated: 2025/12/23 19:16:01 by frromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <Array.hpp>
+#include <cstdlib>
+#include <ctime>
+#include "Array.hpp"
 
 #define MAX_VAL 750
+
+void my_tests()
+{
+    std::cout << "\n=== MY TESTS ===\n"
+              << std::endl;
+
+    std::cout << "1. Empty constructor: empty" << std::endl;
+    Array<int> empty;
+    std::cout << "   Size: " << empty.size() << std::endl;
+
+    std::cout << std::endl
+              << "2. Constructor with size 5:" << std::endl;
+    Array<int> five(5);
+    std::cout << "   Size: " << five.size() << std::endl;
+
+    std::cout << std::endl
+              << "3. Write and read elements:" << std::endl;
+    five[0] = 42;
+    five[1] = 21;
+    five[4] = 84;
+    std::cout << "   five[0] = " << five[0] << std::endl;
+    std::cout << "   five[1] = " << five[1] << std::endl;
+    std::cout << "   five[4] = " << five[4] << std::endl;
+
+    std::cout << std::endl
+              << "4. Copy constructor (deep copy test):"
+              << std::endl;
+    Array<int> copy(five);
+    std::cout << "   Original[0] = " << five[0] << std::endl;
+    std::cout << "   Copy[0] = " << copy[0] << std::endl;
+
+    std::cout << std::endl
+              << "5. Assignment operator:" << std::endl;
+    Array<int> assigned;
+    assigned = five;
+    std::cout << "   Original[4] = " << five[4] << std::endl;
+    std::cout << "   Assigned[4] = " << assigned[4] << std::endl;
+
+    std::cout << std::endl
+              << "6. Const array access:" << std::endl;
+    const Array<int> const_array(five);
+    std::cout << "   const_array[1] = " << const_array[1] << std::endl;
+    std::cout << "   Size of const_array: " << const_array.size() << std::endl;
+    // const_array[1] = 777; // This should NOT compile
+
+    std::cout << std::endl
+              << "7. Out of bounds exception tests:" << std::endl;
+
+    std::cout << "   Trying five[5] (index = size): "; // Five index 0 to 4
+    try
+    {
+        five[5] = 0;
+        std::cout << "ERROR: Should have thrown exception!" << std::endl; // Fail
+    }
+    catch (const std::exception &e)
+    {
+        std::cout << "OK: Exception caught: " << e.what() << std::endl; // is ok
+    }
+
+    std::cout << "   Trying five[-1] (negative index): ";
+    try
+    {
+        five[-1] = 0;
+        std::cout << "ERROR: Should have thrown exception!" << std::endl;
+    }
+    catch (const std::exception &e)
+    {
+        std::cout << "OK: Exception caught: " << e.what() << std::endl;
+    }
+
+    std::cout << std::endl;
+}
+
 int main(int, char **)
 {
+
+    my_tests();
+
+    std::cout << "=== RUNNING ORIGINAL SUBJECT TESTS ===" << std::endl;
+
     Array<int> numbers(MAX_VAL);
     int *mirror = new int[MAX_VAL];
     srand(time(NULL));
@@ -60,6 +140,6 @@ int main(int, char **)
     {
         numbers[i] = rand();
     }
-    delete[] mirror; //
+    delete[] mirror;
     return 0;
 }
