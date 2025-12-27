@@ -6,7 +6,7 @@
 /*   By: frromero <frromero@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 17:02:06 by frromero          #+#    #+#             */
-/*   Updated: 2025/12/27 20:01:58 by frromero         ###   ########.fr       */
+/*   Updated: 2025/12/27 20:05:30 by frromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void my_tests()
     const Array<int> constArray(fiveArray);
     std::cout << "   constArray[1] = " << constArray[1] << std::endl;
     std::cout << "   Size of constArray: " << constArray.size() << std::endl;
-    // constArray[1] = 777; // This should NOT compile
+    // constArray[1] = 777; // This should NOT compile, ConstArray is CONSTANT !!
 
     std::cout << std::endl
               << "7. Out of bounds exception tests:" << std::endl;
