@@ -6,7 +6,7 @@
 /*   By: frromero <frromero@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 17:02:06 by frromero          #+#    #+#             */
-/*   Updated: 2025/12/27 12:33:13 by frromero         ###   ########.fr       */
+/*   Updated: 2025/12/27 12:59:09 by frromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,24 @@ void my_tests()
               << "7. Out of bounds exception tests:" << std::endl;
 
     std::cout << "   Trying five[5] (index = size): "; // Five index 0 to 4
+    std::cout << std::endl
+              << "8. Default initialization test (must be zeros):" << std::endl;
+
+    int *dirty = new int[10];
+    for (int i = 0; i < 10; i++)
+        dirty[i] = 999;
+    delete[] dirty;
+
+    Array<int> defaultInit(10);
+    std::cout << "   ";
+    for (unsigned int i = 0; i < defaultInit.size(); i++)
+    {
+        std::cout << defaultInit[i];
+        if (i < defaultInit.size() - 1)
+            std::cout << " ";
+    }
+    std::cout << std::endl;
+    std::cout << std::endl;
     try
     {
         five[5] = 0;
