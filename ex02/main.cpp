@@ -6,7 +6,7 @@
 /*   By: frromero <frromero@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 17:02:06 by frromero          #+#    #+#             */
-/*   Updated: 2025/12/27 19:58:52 by frromero         ###   ########.fr       */
+/*   Updated: 2025/12/27 20:01:28 by frromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,6 @@
 
 void my_tests()
 {
-    std::cout << "\n=== MY TESTS ===\n"
-              << std::endl;
-
     std::cout << "1. Empty constructor: emptyArray" << std::endl;
     Array<int> emptyArray;
     std::cout << "   Size: " << emptyArray.size() << std::endl;
@@ -109,6 +106,9 @@ void my_tests()
 
 int main(int, char **)
 {
+    std::cout << std::endl
+              << "=== MY TESTS ===" << std::endl
+              << std::endl;
 
     my_tests();
 
@@ -143,7 +143,7 @@ int main(int, char **)
     }
     catch (const std::exception &e)
     {
-        std::cerr << e.what() << '\n';
+        std::cerr << e.what() << std::endl;
     }
     try
     {
@@ -151,7 +151,7 @@ int main(int, char **)
     }
     catch (const std::exception &e)
     {
-        std::cerr << e.what() << '\n';
+        std::cerr << e.what() << std::endl;
     }
 
     for (int i = 0; i < MAX_VAL; i++)
