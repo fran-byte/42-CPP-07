@@ -6,7 +6,7 @@
 /*   By: frromero <frromero@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 22:47:55 by frromero          #+#    #+#             */
-/*   Updated: 2025/12/23 18:12:49 by frromero         ###   ########.fr       */
+/*   Updated: 2025/12/27 12:27:44 by frromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ public:
     ~Array(void);
     Array &operator=(Array const &other);
 
-    T &operator[](unsigned int index);             // operator[] normal
-    const T &operator[](unsigned int index) const; // operator[] const
-    unsigned int size() const;                     // size()
+    T &operator[](unsigned int index);
+    const T &operator[](unsigned int index) const;
+    unsigned int size() const;
 };
 
 #include "Array.tpp"
