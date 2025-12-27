@@ -6,7 +6,7 @@
 /*   By: frromero <frromero@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 17:02:06 by frromero          #+#    #+#             */
-/*   Updated: 2025/12/27 12:59:09 by frromero         ###   ########.fr       */
+/*   Updated: 2025/12/27 13:09:16 by frromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void my_tests()
     std::cout << std::endl
               << "8. Default initialization test (must be zeros):" << std::endl;
 
-    int *dirty = new int[10];
+    int *dirty = new int[10]; // basura
     for (int i = 0; i < 10; i++)
         dirty[i] = 999;
     delete[] dirty;
