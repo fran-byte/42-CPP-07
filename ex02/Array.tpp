@@ -6,7 +6,7 @@
 /*   By: frromero <frromero@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 17:09:44 by frromero          #+#    #+#             */
-/*   Updated: 2025/12/23 18:39:41 by frromero         ###   ########.fr       */
+/*   Updated: 2025/12/27 12:30:08 by frromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ template <typename T>
 Array<T>::Array() : _arrayAddr(NULL), _n(0) {}
 
 template <typename T>
-Array<T>::Array(unsigned int n) : _arrayAddr(new T[n]), _n(n)
+Array<T>::Array(unsigned int n) : _arrayAddr(new T[n]()), _n(n)
 {
 }
 

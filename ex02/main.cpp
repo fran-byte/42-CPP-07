@@ -6,7 +6,7 @@
 /*   By: frromero <frromero@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 17:02:06 by frromero          #+#    #+#             */
-/*   Updated: 2025/12/23 19:16:01 by frromero         ###   ########.fr       */
+/*   Updated: 2025/12/27 12:33:13 by frromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void my_tests()
     try
     {
         five[5] = 0;
-        std::cout << "ERROR: Should have thrown exception!" << std::endl; // Fail
+        std::cout << "ERROR: Should have thrown exception!" << std::endl; // in not OK
     }
     catch (const std::exception &e)
     {
