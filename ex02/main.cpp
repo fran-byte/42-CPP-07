@@ -6,7 +6,7 @@
 /*   By: frromero <frromero@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/23 17:02:06 by frromero          #+#    #+#             */
-/*   Updated: 2025/12/27 20:01:28 by frromero         ###   ########.fr       */
+/*   Updated: 2025/12/27 20:01:58 by frromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,6 +137,7 @@ int main(int, char **)
             return 1;
         }
     }
+
     try
     {
         numbers[-2] = 0;
@@ -145,6 +146,7 @@ int main(int, char **)
     {
         std::cerr << e.what() << std::endl;
     }
+
     try
     {
         numbers[MAX_VAL] = 0;
